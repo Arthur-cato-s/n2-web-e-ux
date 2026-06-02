@@ -1,12 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title> Mostrando a API </title>
 <body>
-    <div id="elemento"></div>
+
+    <header>
+        <h1 class="logo">Garrafas</h1>
+        <div class="header-stats">
+            <div><strong id="stat-total">0</strong>Garrafas</div>
+            <div><strong id="stat-disp">0</strong>Disponíveis</div>
+            <div><strong id="stat-vend">0</strong>Vendidos</div>
+        </div>
+    </header>
+
+    <main>
+
+        
+        <div class="top-row">
+
+            <section class="painel">
+                <h2 class="painel-title">Nova Garrafa</h2>
+
+                <fieldset style="border:none;padding:0;margin:0">
+                    <div class="field">
+                        <label for="f-modelo">Marca / Modelo</label>
+                        <input id="f-modelo" type="text" placeholder="Ex: Garrafa Stanley" />
+                    </div>
+
+                    <div class="field">
+                        <label for="f-cor">Cor</label>
+                        <input id="f-Cor" type="text" placeholder="branco" />
+                    </div>
+                    <div class="field">
+                        <label for="f-preco">Preço (R$)</label>
+                        <input id="f-preco" type="number" placeholder="180" min="0" />
+                    </div>
+                    <div class="field">
+                        <label for="f-status">Status</label>
+                        <select id="f-status">
+                            <option value="disponivel">Disponível</option>
+                            <option value="esgotado">Esgotado</option>
+                        </select>
+                    </div>
+                    <input type="number" id="numero" min="1" max="100">
+                    <button onclick="mostrarNumero()">Selecionar Quantidade</button>
+                </fieldset>
+
+                <button class="btn btn-primary" id="btn-comprar">Comprar Garrafa</button>
+            </section>
+
+            <section class="painel vendedores-painel">
+                <h2 class="painel-title">Vendedores</h2>
+                <ul class="vendedor-list" id="list-user" style="list-style:none;padding:0;margin:0">
+                    <li style="color:var(--muted);font-size:.85rem">Carregando da API...</li>
+                </ul>
+            </section>
+
+        </div>
+        
+        <section class="content">
+            <header class="toolbar">
+                <h2 class="section-title">Estoque</h2>
+                <search class="search-bar">
+                    <label for="busca" class="visually-hidden">Buscar Garrafa</label>
+                    <input type="search" id="busca" placeholder="Buscar Garrafa..." />
+                </search>
+            </header>
+
+            <div id="Garrafas-grid">
+                <output aria-live="polite">
+                    <span class="loading-dot"></span>
+                    <span class="loading-dot"></span>
+                    <span class="loading-dot"></span>
+                </output>
+            </div>
+        </section>
+
+    </main>
+
+
+    <dialog class="modal-overlay" id="modal">
+        <article class="modal">
+            <h2 class="modal-title">Editar Garrafa</h2>
+
+            <fieldset style="border:none;padding:0;margin:0">
+                <input type="hidden" id="edit-id" />
+
+                <div class="field"><label for="edit-modelo">Modelo</label><input id="edit-modelo" type="text" /></div>
+
+                <div class="row2">
+                    <div class="field"><label for="edit-cor">Cor</label><input id="edit-cor" type="text" /></div>
+                </div>
+
+                <div class="field"><label for="edit-preco">Preço</label><input id="edit-preco" type="number" /></div>
+
+                <div class="field">
+                    <label for="edit-status">Status</label>
+                    <select id="edit-status">
+                        <option value="disponivel">Disponível</option>
+                        <option value="esgotado">Esgotado</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="edit-vendedor">Vendedor Responsável</label>
+                    <select id="edit-vendedor">
+                        <option value="">Carregando...</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <footer class="modal-actions">
+                <button class="btn btn-primary" id="btn-salvar-edicao">SALVAR</button>
+                <button class="btn btn-cancel" id="btn-cancelar-edicao">CANCELAR</button>
+            </footer>
+        </article>
+    </dialog>
+
+    <output id="toast" aria-live="assertive" aria-atomic="true"></output>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
