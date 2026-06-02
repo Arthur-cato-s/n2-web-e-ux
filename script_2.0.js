@@ -4,7 +4,7 @@ fetch("https://jsonplaceholder.typicode.com/users?utm_source")
     }).then(dados_tratados1)
 
 function dados_tratados1(coisa1) {
-    const elementoPesquisado = document.getElementById('escreve-aqui')
+    const elementoPesquisado = document.getElementById('escreve-aqui1')
     for (let loop = 0; loop < coisa1.length; loop++) {
         // regra
         const dado1 = coisa1[loop];
