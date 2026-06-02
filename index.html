@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Mostrando a API </title>
     <link rel="stylesheet" href="estilo.css">
+</head>
 <body>
 
     <header>
@@ -32,7 +33,7 @@
 
                     <div class="field">
                         <label for="f-cor">Cor</label>
-                        <input id="f-Cor" type="text" placeholder="branco" />
+                        <input id="f-cor" type="text" placeholder="branco" />
                     </div>
                     <div class="field">
                         <label for="f-preco">Preço (R$)</label>
@@ -45,31 +46,19 @@
                             <option value="esgotado">Esgotado</option>
                         </select>
                     </div>
-                    <input type="number" id="numero" min="1" max="100">
-                    <button onclick="mostrarNumero()">Selecionar Quantidade</button>
+                    <div class="field">
+                        <label for="numero">Quantidade</label>
+                        <input type="number" id="numero" min="1" max="100" />
+                    </div>
+                    <button type="button" onclick="mostrarNumero()">Selecionar Quantidade</button>
                 </fieldset>
 
-                <button class="btn btn-primary" id="btn-comprar">Comprar Garrafa</button>
+                <button type="button" class="btn btn-primary" id="btn-comprar">Comprar Garrafa</button>
             </section>
 
             <section class="painel vendedores-painel">
                 <h2 class="painel-title">Vendedores</h2>
-                        <div id='escreve-aqui1'></div>
-                            <script src="script_2.0.js"></script>
-    <style>                      
-        #escreve-aqui{
-          display: flex;
-          gap: 14;
-          flex-wrap: wrap;
-        }
-        .card {
-            width: 300px;
-            padding: 10px;
-            background: gray;
-            margin: 10px;
-        }
-        </style>
-
+                <div id="escreve-aqui1"></div>
             </section>
 
         </div>
@@ -77,12 +66,11 @@
         <section class="content">
             <header class="toolbar">
                 <h2 class="section-title">Estoque</h2>
-                <search class="search-bar">
-                    <label for="busca" class="visually-hidden">Buscar Garrafa</label>
-                    <input type="search" id="busca" placeholder="Buscar Garrafa..." />
-                </search>
+                    <div class="search-bar">
+                        <label for="busca" class="visually-hidden">Buscar Garrafa</label>
+                        <input type="search" id="busca" placeholder="Buscar Garrafa..." />
+                    </div>
             </header>
-
             <div id="Garrafas-grid">
                 <output aria-live="polite">
                     <span class="loading-dot"></span>
@@ -136,22 +124,7 @@
     <output id="toast" aria-live="assertive" aria-atomic="true"></output>
 
     <script src="script.js"></script>
-
-    <div id="escreve-aqui"></div>
-
-      <style>
-        #escreve-aqui{
-          display: flex;
-          gap: 14;
-          flex-wrap: wrap;
-        }
-        .card {
-            width: 300px;
-            padding: 10px;
-            background: gray;
-            margin: 10px;
-        }
-    </style>
+    <script src="script_2.0.js"></script>
 
 
 

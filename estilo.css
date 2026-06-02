@@ -145,6 +145,71 @@ button:hover{
     gap:20px;
 }
 
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #374151;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.card h3{
+    color:#bfdbfe;
+    font-size:1.1rem;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.5;
+}
+
+.card-meta{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    color:#94a3b8;
+    flex-wrap:wrap;
+}
+
+.card-actions{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.btn-secondary,
+button.btn-secondary{
+    background:#0ea5e9;
+}
+
+.btn-secondary:hover,
+button.btn-secondary:hover{
+    background:#0284c7;
+}
+
+.status-available{
+    color:#34d399;
+}
+
+.status-sold{
+    color:#f87171;
+}
+
+#escreve-aqui1{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.empty-state{
+    color:#cbd5e1;
+    background:#111827;
+    padding:18px;
+    border-radius:12px;
+    border:1px solid #334155;
+}
+
 /* Modal */
 .modal{
     background:#111827;
@@ -180,6 +245,8 @@ button:hover{
     color:white;
     padding:15px;
     border-radius:8px;
+    opacity:0;
+    transition:opacity 0.2s ease;
 }
 
 /* Responsividade */

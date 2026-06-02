@@ -1,26 +1,22 @@
-fetch("https://jsonplaceholder.typicode.com/users?utm_source")
-    .then(function (API_retorno1) {
-        return API_retorno1.json()
-    }).then(dados_tratados1)
+fetch('https://jsonplaceholder.typicode.com/users?utm_source')
+    .then(response => response.json())
+    .then(renderVendedores)
+    .catch(() => {
+        const element = document.getElementById('escreve-aqui1');
+        element.innerHTML = '<div class="empty-state">Falha ao carregar vendedores.</div>';
+    });
 
-function dados_tratados1(coisa1) {
-    const elementoPesquisado = document.getElementById('escreve-aqui1')
-    for (let loop = 0; loop < coisa1.length; loop++) {
-        const dado1 = coisa1[loop];
-        elementoPesquisado.innerHTML += `
-         <article id="card1_${dado1.id}" class="card">
-         <h2> ${dado1.name} </h2>
-         <div> ${dado1.email} </div>
-         <div> ${dado1.company?.name || ""} </div>
-         <div> <button onclick="deletar('card1_${dado1.id}')"> Escolher </button> </div>
-         </article>
-        `
-    }
-}
-
-function deletar(id) {
-    const elementoQueVamosDeletar = document.getElementById(id)
-    if (elementoQueVamosDeletar) {
-        elementoQueVamosDeletar.remove()
-    }
+function renderVendedores(users) {
+    const elementoPesquisado = document.getElementById('escreve-aqui1');
+    elementoPesquisado.innerHTML = users.map(user => `
+        <article id="card1_${user.id}" class="card">
+            <h3>${user.name}</h3>
+            <div class="card-meta">
+                <span>Telefone: ${user.phone}</span>
+            </div>
+            <div class="card-actions">
+                <button type="button" class="btn btn-secondary" onclick="deleteCard('card1_${user.id}')">Remover</button>
+            </div>
+        </article>
+    `).join('');
 }
