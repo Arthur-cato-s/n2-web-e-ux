@@ -33,7 +33,7 @@ button{
     display: block;
     margin-bottom: 8px;
 }
-/* Reset */
+
 *{
     margin: 0;
     padding: 0;
@@ -48,7 +48,6 @@ body{
     padding: 40px;
 }
 
-/* Título principal */
 h1{
     text-align: center;
     color: #7CFC98;
@@ -57,7 +56,6 @@ h1{
     text-shadow: 0 0 10px rgba(124,252,152,0.4);
 }
 
-/* Botão */
 #btn-adicionar{
     display: block;
     margin: 0 auto 30px;
@@ -69,7 +67,6 @@ h1{
     
 }
 
-/* Área dos posts */
 #lista-posts{
     max-width: 900px;
     margin: auto;
@@ -77,7 +74,6 @@ h1{
     gap: 20px;
 }
 
-/* Card dos posts */
 .post{
     background-color: #13201a;
     border: 1px solid #1f3b2c;
@@ -93,28 +89,24 @@ h1{
     border-left-color: #7CFC98;
 }
 
-/* Título dos posts */
 .post h2{
     color: #7CFC98;
     margin-bottom: 10px;
 }
 
-/* Texto */
 .post p{
     line-height: 1.6;
     color: #cbd5e1;
 }
 
-/* Cards dos posts */
 .card{
-    background-color:tan; /* amarelo escuro quase preto */
+    background-color:tan; 
     border: 2px solid #000000;
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
 }
 
-/* Autor */
 .autor{
     display: block;
     color:#666;
@@ -122,20 +114,18 @@ h1{
     margin-bottom: 10px;
 }
 
-/* Título do post */
 .card h3{
     color:#666;
     margin-bottom: 10px;
 }
 
-/* Conteúdo */
 .card p{
     color: #f3f4f6;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
-/* Botão Editar */
+
 .btn-editar{
     background-color: #166534;
     color: white;
@@ -146,7 +136,7 @@ h1{
     margin-right: 10px;
 }
 
-/* Botão Remover */
+
 .btn-remover{
     background-color: #991b1b;
     color: white;
