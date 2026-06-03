@@ -33,3 +33,125 @@ button{
     display: block;
     margin-bottom: 8px;
 }
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #0b1510;
+    color: #d1d5db;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Título principal */
+h1{
+    text-align: center;
+    color: #7CFC98;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(124,252,152,0.4);
+}
+
+/* Botão */
+#btn-adicionar{
+    display: block;
+    margin: 0 auto 30px;
+    background-color: #14532d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    
+}
+
+/* Área dos posts */
+#lista-posts{
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+/* Card dos posts */
+.post{
+    background-color: #13201a;
+    border: 1px solid #1f3b2c;
+    border-left: 5px solid #22c55e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.post:hover{
+    transform: translateY(-3px);
+    border-left-color: #7CFC98;
+}
+
+/* Título dos posts */
+.post h2{
+    color: #7CFC98;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.post p{
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* Cards dos posts */
+.card{
+    background-color:tan; /* amarelo escuro quase preto */
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Autor */
+.autor{
+    display: block;
+    color:#666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Título do post */
+.card h3{
+    color:#666;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo */
+.card p{
+    color: #f3f4f6;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Botão Editar */
+.btn-editar{
+    background-color: #166534;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Botão Remover */
+.btn-remover{
+    background-color: #991b1b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
