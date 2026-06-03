@@ -2,5 +2,5 @@
 integrantes do grupo/
 Arthur Moraes/
 Arthur Signorelli/
-Matheus Dallagnolo/
+Mateus Dallagnolo/
 Leonardo Manenti Teixeira
